@@ -1,4 +1,4 @@
-﻿/* ===== BARBERÍA CORONA / ALESTA ===== */
+/* ===== BARBERÍA CORONA / ALESTA ===== */
 :root{
   --verde: #1f7a63;
   --verde-claro: #2fa58a;
@@ -72,6 +72,44 @@ body{
 .nav-links{
   display:flex;
   align-items:center;
+}
+
+/* ===== HAMBURGER / NAV TOGGLE ===== */
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:none;
+  width:46px;
+  height:46px;
+  border-radius:8px;
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+}
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after{
+  content:'';
+  display:block;
+  height:3px;
+  width:22px;
+  background:var(--grafito);
+  border-radius:3px;
+  transition:transform .25s ease, opacity .25s ease;
+}
+.nav-toggle span::before{transform:translateY(-7px)}
+.nav-toggle span::after{transform:translateY(7px)}
+
+/* cuando el nav está abierto transformamos la X */
+.navbar.nav-open .nav-toggle span{background:transparent}
+.navbar.nav-open .nav-toggle span::before{transform:rotate(45deg)}
+.navbar.nav-open .nav-toggle span::after{transform:rotate(-45deg)}
+
+@media(max-width:768px){
+  .nav-toggle{display:flex}
+  .nav-links{display:none;flex-direction:column;width:100%;position:absolute;left:0;right:0;top:100%;padding:12px;gap:8px;background:var(--blanco);box-shadow:0 18px 40px rgba(0,0,0,0.06);border-bottom-left-radius:10px;border-bottom-right-radius:10px}
+  .navbar.nav-open .nav-links{display:flex}
+  .nav-links a{background:transparent;padding:10px 12px;border-radius:8px}
 }
 
 .nav-links a{
@@ -218,6 +256,24 @@ body{
 .btn:hover{
   background:var(--verde-oscuro);
   transform:scale(1.05);
+}
+
+/* Asegura que el botón 'Agendar' en la nav sea siempre verde y visible */
+.nav-links .btn{
+  background:var(--verde) !important;
+  color:#fff !important;
+  padding:10px 16px;
+  border-radius:30px;
+  margin-left:10px;
+}
+
+.nav-links .btn:hover{
+  background:var(--verde-oscuro) !important;
+  transform:none;
+}
+
+@media(max-width:768px){
+  .nav-links .btn{width:100%;text-align:center;padding:12px;margin:6px 0}
 }
 
 /* ===== BOTÓN WOW (SUAVE) ===== */
