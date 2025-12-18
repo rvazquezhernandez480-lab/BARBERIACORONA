@@ -75,4 +75,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* ===============================
+     6. NAV TOGGLE (HAMBURGER)
+  =============================== */
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      const opened = navbar.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
+    });
+  }
+
+  // Close menu when a link is clicked (mobile)
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbar.classList.contains('nav-open')){
+        navbar.classList.remove('nav-open');
+        if (navToggle) navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+
+  // Close menu on resize to avoid stuck state
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navbar.classList.contains('nav-open')){
+      navbar.classList.remove('nav-open');
+      if (navToggle) navToggle.setAttribute('aria-expanded','false');
+    }
+  });
+
 });
