@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserva | Barbería Corona</title>
+<link rel="stylesheet" href="estilos.css">
+<link rel="icon" href="imagenes/icon.jpeg">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo"><img src="imagenes/logo.jpeg" alt="Corona" class="site-logo"> <span>BARBERIA CORONA</span></a>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="productos.html">Productos</a>
+    <a href="resenas.html">Reseñas</a>
+    <a href="direccion.html">Ubicación</a>
+  </div>
+</nav>
+
+<section class="container">
+<div class="form-box reveal">
+<h2>Agenda tu cita</h2>
+
+<form id="form-reserva">
+<input type="text" id="nombre" placeholder="Nombre completo" required>
+
+<select id="servicio">
+  <option>Corte de Cabello</option>
+  <option>Corte y Barba</option>
+  <option>Delineado de Cejas</option>
+  <option>Mascarilla Facial</option>
+  <option>Ondulaciones</option>
+</select>
+
+<input type="date" id="fecha" required>
+<input type="time" id="hora" required>
+<textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
+
+<button class="btn" type="submit">Enviar por WhatsApp</button>
+</form>
+</div>
+</section>
+
+<script src="barber.js"></script>
+</body>
+</html>

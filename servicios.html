@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios | Barbería Corona</title>
+<link rel="stylesheet" href="estilos.css">
+<link rel="icon" href="imagenes/icon.jpeg">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo"><img src="imagenes/logo.jpeg" alt="Corona" class="site-logo"> <span>BARBERIA CORONA</span></a>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="productos.html">Productos</a>
+    <a href="resenas.html">Reseñas</a>
+    <a href="direccion.html">Ubicación</a>
+    <a href="contacto.html" class="btn">Agendar</a>
+  </div>
+</nav>
+
+<section class="container services-section">
+  <h2 class="section-title reveal">Nuestros Servicios</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card reveal" onclick="location.href='contacto.html?servicio=Corte%20de%20Cabello'">
+      <img src="imagenes/corte.jpeg" alt="Corte de Cabello">
+      <div class="service-body">
+        <h3>Corte de Cabello</h3>
+        <p>Análisis del rostro, diseño personalizado, corte profesional, lavado y estilizado final.</p>
+        <span class="price">$150</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal" onclick="location.href='contacto.html?servicio=Corte%20y%20Barba'">
+      <img src="imagenes/barba.jpeg" alt="Corte y Barba">
+      <div class="service-body">
+        <h3>Corte y Barba</h3>
+        <p>Perfilado con navaja, toalla caliente, aceites hidratantes y acabado preciso.</p>
+        <span class="price">$250</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal" onclick="location.href='contacto.html?servicio=Delineado%20de%20Cejas'">
+      <img src="imagenes/ceja.jpeg" alt="Delineado de Cejas">
+      <div class="service-body">
+        <h3>Delineado de Cejas</h3>
+        <p>Diseño simétrico que resalta la expresión facial.</p>
+        <span class="price">$50</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal" onclick="location.href='contacto.html?servicio=Mascarilla%20Facial'">
+      <img src="imagenes/facial.jpeg" alt="Mascarilla Facial">
+      <div class="service-body">
+        <h3>Mascarilla Facial</h3>
+        <p>Limpieza profunda, exfoliación e hidratación de la piel.</p>
+        <span class="price">$150</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal" onclick="location.href='contacto.html?servicio=Ondulaciones'">
+      <img src="imagenes/ondas.jpeg" alt="Ondulaciones">
+      <div class="service-body">
+        <h3>Ondulaciones</h3>
+        <p>Proceso técnico especializado para ondas duraderas y definidas.</p>
+        <span class="price">$450</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<script src="barber.js"></script>
+</body>
+</html>
